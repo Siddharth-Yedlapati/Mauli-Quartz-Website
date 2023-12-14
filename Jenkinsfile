@@ -4,8 +4,8 @@ pipeline {
   tools {nodejs "nodejs"}
     environment {
         CI = 'true'
-        registryfrontend = 'siddharth322/test-frontend'
-        registrybackend = 'siddharth322/test-backend'
+        registryfrontend = 'siddharth322/mauliquartz-frontend'
+        registrybackend = 'siddharth322/mauliquartz-backend'
         DOCKERHUB_CRED = credentials('CRED_DOCKER')
         registryCredential = 'CRED_DOCKER'
         dockerimage = ''
@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('Git Pull') {
         steps {
-            git url: 'https://github.com/Siddharth-Yedlapati/Test-Jenkins.git', branch: 'main'
+            git url: 'https://github.com/Siddharth-Yedlapati/Mauli-Quartz-Website.git', branch: 'main'
         }
     }
 
