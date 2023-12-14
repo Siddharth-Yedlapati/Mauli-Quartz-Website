@@ -6,11 +6,11 @@
     - name: Copy Docker Compose file from host machine
       copy:
         src: ./docker-compose.yml
-        dest: /home/siddharth/Downloads/mauli_git/docker-compose.yml
+        dest: /home/siddharth/Downloads/mauli_quartz_git/docker-compose.yml
 
   # use files parameter to use multiple docker-compose.yml files
     - name: deploy Docker Compose stack
       community.docker.docker_compose:
-        project_src: /home/siddharth/Downloads/mauli_git
+        project_src: /home/siddharth/Downloads/mauli_quartz_git
         files:
         - docker-compose.yml
